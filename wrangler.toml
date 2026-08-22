@@ -1,0 +1,8 @@
+name = "jeju-connect"
+compatibility_date = "2025-08-22"
+compatibility_flags = ["nodejs_compat"]
+
+# Astro/Cloudflare adapter outputs a _worker.js directory inside dist/;
+# Cloudflare auto-discovers it when [assets] points to the same directory.
+[assets]
+directory = "./dist"

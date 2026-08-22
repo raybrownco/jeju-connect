@@ -1,0 +1,12 @@
+dist/
+node_modules/
+.astro/
+
+# Wrangler local dev secrets — never commit
+.dev.vars
+
+# Wrangler cache
+.wrangler/
+
+# OS
+.DS_Store
