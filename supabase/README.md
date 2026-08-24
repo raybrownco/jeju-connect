@@ -75,10 +75,15 @@ set -a; source .env; set +a
 supabase db push
 ```
 
-`.env` and `.dev.vars` are both gitignored. They hold live keys — in
-particular `SUPABASE_SERVICE_ROLE_KEY`, which bypasses every RLS policy in
-this directory. If one is ever committed, rotate the key in the dashboard
-rather than just deleting the file.
+`.env` is gitignored. It holds live keys — in particular
+`SUPABASE_SERVICE_ROLE_KEY`, which bypasses every RLS policy in this
+directory. If it is ever committed, rotate the key in the dashboard rather
+than just deleting the file.
+
+> **If you followed the earlier setup and made a `.dev.vars`, delete it.**
+> `wrangler dev` reads `.env` natively (verified on Wrangler 4.125.0), but
+> `.dev.vars` takes precedence when both exist — a leftover one silently
+> shadows `.env` and you get stale or missing credentials with no warning.
 
 ## Running the tests
 

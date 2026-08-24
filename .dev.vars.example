@@ -1,6 +1,0 @@
-# Copy this file to .dev.vars (gitignored) and fill in your values for local dev.
-# In production, set these via: wrangler secret put <KEY>
-
-SUPABASE_URL=https://your-project.supabase.co
-SUPABASE_ANON_KEY=your-anon-key-here
-SUPABASE_SERVICE_ROLE_KEY=your-service-role-key-here
