@@ -4,6 +4,7 @@ node_modules/
 
 # Wrangler local dev secrets — never commit
 .dev.vars
+.env
 
 # Wrangler cache
 .wrangler/
