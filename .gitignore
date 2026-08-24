@@ -2,8 +2,13 @@ dist/
 node_modules/
 .astro/
 
-# Wrangler local dev secrets — never commit
+# Local secrets — never commit.
+# .dev.vars feeds `wrangler dev`; .env feeds the Supabase CLI and any
+# shell tooling. Both hold live keys; only the *.example templates are tracked.
 .dev.vars
+.env
+.env.*
+!.env.example
 
 # Wrangler cache
 .wrangler/
